@@ -1,5 +1,9 @@
 import React , {useState, useEffect}from 'react';
 import ArticleItem from './ArticleItem';
+import NewArticleForm from './NewArticleForm';
+
+
+
 
 function ArticleList() {
   const [articles, setArticles] =useState([])
@@ -16,12 +20,13 @@ function ArticleList() {
  },[])
 
   const arts= articles.map((article) =>
-<ArticleItem key={article.id} name={article.name} title={article.title} image={article.image} description={article.description} content={article.content} author={article.author} />  
+<ArticleItem key={article.id} name={article.name} title={article.title} image={article.image} description={article.description} content={article.content} author={article.author} />
 
   )
 
   return (
     <div>
+      <NewArticleForm />
       <div>
         <div className="arts" >
         {arts}
