@@ -1,24 +1,29 @@
-.arts{
+.art{
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid;
+    width: 90%; 
+    border: 1px solid;
+   
 }
 .article{
     border: 2px solid;
-    width: 30%;
-    margin-top: 10px;
-
+    width: 300px;
+    height: 650px;
+    margin-left: 90px;
+    margin-top: 15px;
+    word-wrap: break-word; 
 
 }
-.show{
-height: 50px;
+form{
+height: 100px;
 background-color: pink;
+padding-top: 20px;
 }
 img{
-    width: 50%;
+    width: 55%;
     display: block;
     margin-left: auto;
     margin-right: auto;

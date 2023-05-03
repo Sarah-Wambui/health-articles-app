@@ -1,5 +1,6 @@
 import React , {useState, useEffect}from 'react';
 import ArticleItem from './ArticleItem';
+import NewArtcleForm from './NewArtcleForm';
 
 function ArticleList() {
   const [articles, setArticles] =useState([])
@@ -22,10 +23,11 @@ function ArticleList() {
 
   return (
     <div>
-      <div>
-        <div className="arts" >
-        {arts}
-        </div>
+      <NewArtcleForm/>
+      <div className="arts" >
+          <div className="art" >
+            {arts}
+          </div>
       </div>
          
     </div>
