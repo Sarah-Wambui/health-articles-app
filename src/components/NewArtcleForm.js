@@ -23,7 +23,8 @@ function handleChange(e){
         <input type="text" placeholder="Title" />
         <input type="text" placeholder="Description" />
         <input type="text" placeholder="image url"/>
-        <input type="text" placeholder="Content"  />
+        <input type="text" placeholder="Content"/>
+        <button type="button">Add Article</button>
     </form>
   )
 }
