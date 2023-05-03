@@ -1,22 +1,19 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
-function ArticleItem({articles}) {
-
-const arts = Object.keys(articles).map((articleID) => (
-    <div key={articleID} className="article" >
-        <h2>
-        <Link to={`/articles/${articleID}`}>{articles[articleID].name}</Link>
-        </h2>
-        <img src={articles[articleID].image} alt="" />
-        
-    </div>
-    
-))
+function ArticleItem({name, title, description , content, image, author}) {
+ 
+  
   return (
-    <div>
-        {arts}
+   <div>
+    <div className="article" >
+      <h2>{name}</h2>
+      <img src={image} alt="" />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <p>{content}</p>
+      <h2>{author}</h2>
     </div>
+   </div>
   )
 }
 export default ArticleItem
