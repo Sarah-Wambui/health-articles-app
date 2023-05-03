@@ -2,12 +2,6 @@ import React , {useState, useEffect}from 'react';
 import ArticleItem from './ArticleItem';
 import NewArticleForm from './NewArticleForm';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 89018fc50e27c699b7909ef1fa3d7889dacb733b
 function ArticleList() {
   const [articles, setArticles] =useState([])
   console.log(articles)
@@ -25,17 +19,45 @@ function ArticleList() {
  function addArticles (newArticles) {
    setArticles ([...articles, newArticles]) 
  }
-  const arts= articles.map((article) =>
-<ArticleItem key={article.id} name={article.name} title={article.title} image={article.image} description={article.description} content={article.content} author={article.author} />
+
+ function deleteArticle(id){
+  fetch(`http://localhost:3000/articles/${id}`,{
+    method: "DELETE",
+  })
+  .then(resp => resp.json())
+  .then(() =>{
+    const updatedArticles= articles.filter((article)=> article.id !== id)
+    setArticles(updatedArticles)
+  })
+ }
+
+ function updateAuthor(id){
+  fetch(`http://localhost:3000/articles/${id}`,{
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      author: "Thank you for reading my article"
+    })
+  })
+  .then(resp => resp.json())
+  .then(updatedArticle =>{
+    const updatedArticles = articles.map((article)=>{
+      if(article.id === updatedArticle.id) return updatedArticle
+      return article
+    })
+    setArticles(updatedArticles)
+  })
+ }
+
+  const arts= articles.map((article,index) =>
+<ArticleItem key={index} name={article.name} title={article.title} image={article.image} description={article.description} content={article.content} id={article.id} author={article.author} deleteArticle={deleteArticle} updateAuthor={updateAuthor}/>
   )
 
   return (
     <div>
-<<<<<<< HEAD
-      <NewArticleForm />
-=======
       <NewArticleForm  addArticles= {addArticles}/>
->>>>>>> 89018fc50e27c699b7909ef1fa3d7889dacb733b
       <div>
         <div className="arts" >
         {arts}

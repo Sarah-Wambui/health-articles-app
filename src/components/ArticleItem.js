@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ArticleItem({name, title, description , content, image, author}) {
+function ArticleItem({name, id, title, description , content, image, author, deleteArticle, updateAuthor}) {
  
   
   return (
@@ -11,8 +11,8 @@ function ArticleItem({name, title, description , content, image, author}) {
       <h3>{title}</h3>
       <p>{description}</p>
       <p>{content}</p>
-      <h2>{author}</h2>
-      <button>X</button>
+      <h2 onClick={()=>updateAuthor(id)} >{author}</h2>
+      <button onClick={()=> deleteArticle(id)} >X</button>
     </div>
    </div>
   )

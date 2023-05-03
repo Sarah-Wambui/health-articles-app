@@ -8,13 +8,12 @@ function NewArticleForm({addArticles}) {
         title: "",
         description: "",
         image: "",
-        content: "",
-        
+        content: "",    
     })
     function handleOnChange(event) {
       setFormData({
         ...formData,
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value,
       })
     }
 

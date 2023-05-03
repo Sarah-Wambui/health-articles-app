@@ -1,18 +1,9 @@
 {
   "articles": [
     {
-      "id": 1,
-      "name": "Livemint",
-      "author": "Livemint",
-      "title": "Long Covid More Severe In Women Than Men, Suggests Study - Mint",
-      "description": "The study found that 91% of patients, who were followed up for five months on average, continued to experience Covid-19 symptoms. Breathlessness was the most common symptom of long Covid-19, followed by fatigue",
-      "image": "https://images.livemint.com/img/2022/04/21/600x338/long_covid_symptoms_1650540839356_1650540839488.jpg",
-      "content": "Post-coronavirus complications, also called long Covid syndrome, induce more symptoms in women than men, a new study has found. \r\nThe new research, published in the Journal of Women's Health, reveale… [+2402 chars]"
-    },
-    {
       "id": 2,
       "name": "The European Scientist",
-      "author": "Alex Reis",
+      "author": "Thank you for reading my article",
       "title": "Air pollution increases risk of getting COVID-19 in young adults - The European Scientist",
       "description": "Exposure to air pollutants increases the risk of a COVID infection in young adults, according to a study published in the scientific journal JAMA Network Open.",
       "image": "https://www.europeanscientist.com/wp-content/uploads/2022/04/46385A43-4ABE-46E7-8556-37B944126F7F.jpeg",
@@ -380,7 +371,7 @@
     },
     {
       "name": "marvyn",
-      "author": "Sarah",
+      "author": "Thank you for reading my article",
       "title": "beatrice",
       "description": "health",
       "image": "med",
