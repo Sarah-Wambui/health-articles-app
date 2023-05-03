@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-function NewArticleForm() {
+function NewArticleForm({addArticles}) {
     const [formData, setFormData] =  useState({
         name: "", 
         author: "",
@@ -18,19 +18,22 @@ function NewArticleForm() {
       })
     }
 
-    function handleSubmit (event) {
-      event.preventDefault ()
-      fetch("http://localhost:3000/articles",{
+    function handleSubmit(event) {
+      event.preventDefault()
+      const post = {
         method: "POST",
         headers: {
-          "Content-Type ": "application/json"
+          "Content-Type": "application/json",
         },
-
-      body : JSON.stringify(formData), 
-      })
+        body:JSON.stringify(formData),
+      }
+      fetch("http://localhost:3000/articles",post)
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => addArticles(data))
+      .catch (error => console.log (error))
     }
+    let e = 400
+    console.log (e)
 
   return (
 
@@ -39,13 +42,11 @@ function NewArticleForm() {
         <input onChange={handleOnChange} type = "text" name = "author" value = {formData.author} placeholder = "author"/>
         <input onChange={handleOnChange} type = "text" name = "title"value = {formData.title} placeholder = "title"/>
         <input onChange={handleOnChange} type = "text" name = "description" value = {formData.description} placeholder = "description"/>
-        <input onChange={handleOnChange} type = "text" alt="img"  value = {formData.image} placeholder = "image"/>
+        <input onChange={handleOnChange} type = "text" name = "image" value = {formData.image} placeholder = "image"/>
         <input onChange={handleOnChange} type = "text" name = "content"value = {formData.content} placeholder = "content"/>
-        
-        
+        <button type= "submit" > add Article </button>
+
     </form>
-
-
   )
 }
 
