@@ -42,6 +42,7 @@ function NewArticleForm() {
         <input onChange={handleOnChange} type = "text" alt="img"  value = {formData.image} placeholder = "image"/>
         <input onChange={handleOnChange} type = "text" name = "content"value = {formData.content} placeholder = "content"/>
         
+        
     </form>
 
 
