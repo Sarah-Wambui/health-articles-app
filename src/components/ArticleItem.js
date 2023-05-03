@@ -12,6 +12,7 @@ function ArticleItem({name, title, description , content, image, author}) {
       <p>{description}</p>
       <p>{content}</p>
       <h2>{author}</h2>
+      <button>X</button>
     </div>
    </div>
   )
