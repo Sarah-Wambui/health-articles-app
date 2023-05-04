@@ -1,12 +1,12 @@
-### Health Articles App
+# Health Articles App
 ***
 
-### Contributors of this Project
+## Contributors of this Project
 ***
-# 1. Marvyn Kiplagat
-# 2. Beatrice Paul
-# 3. Sarah Wambui
-# 4. Erick Gathua
+### 1. Marvyn Kiplagat
+### 2. Beatrice Paul
+### 3. Sarah Wambui
+### 4. Erick Gathua
 ***
 ### Description
 ***
